@@ -46,6 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Actividad.cs" />
+    <Compile Include="Clases\Actor.cs" />
+    <Compile Include="Clases\Artista.cs" />
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Colaborador.cs" />
+    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\EmpleadoPorHora.cs" />
+    <Compile Include="Clases\Evento.cs" />
+    <Compile Include="Clases\Evento_FB.cs" />
+    <Compile Include="Clases\Grupo.cs" />
+    <Compile Include="Clases\Integrante.cs" />
+    <Compile Include="Clases\Pared.cs" />
+    <Compile Include="Clases\RegistroHistorico.cs" />
+    <Compile Include="Clases\Reparto.cs" />
+    <Compile Include="Clases\Teatro.cs" />
+    <Compile Include="Clases\Ticket.cs" />
+    <Compile Include="Clases\ValoresTickets.cs" />
+    <Compile Include="Enum\ETipoActividad.cs" />
+    <Compile Include="Enum\ETipoEvento.cs" />
+    <Compile Include="Enum\ETipoMembresia.cs" />
+    <Compile Include="Enum\ETipoTicket.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
