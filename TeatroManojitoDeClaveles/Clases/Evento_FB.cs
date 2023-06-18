@@ -56,8 +56,8 @@ namespace TeatroManojitoDeClaveles.Clases
             tipoE = e.tipoE;
             entradas_disponibles = e.entradas_disponibles;
             valores = e.valores;
-            colaboradores = new List<Colaborador>();
-            instituciones_invitadas = new List<string>();
+            colaboradores = e.colaboradores;
+            instituciones_invitadas = e.instituciones_invitadas;
         }
     }
 }
