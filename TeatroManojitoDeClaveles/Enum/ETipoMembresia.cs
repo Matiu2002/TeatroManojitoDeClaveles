@@ -8,5 +8,6 @@ namespace TeatroManojitoDeClaveles.Enum
 {
     internal enum ETipoMembresia
     {
+        Cliente, AmigoDelTeatro
     }
 }

@@ -8,5 +8,6 @@ namespace TeatroManojitoDeClaveles.Enum
 {
     internal enum ETipoTicket
     {
+        PlateaAlta, PlateaBaja, Balcon, Galeria
     }
 }
