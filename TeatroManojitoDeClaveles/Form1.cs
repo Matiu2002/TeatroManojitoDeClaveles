@@ -14,11 +14,15 @@ namespace TeatroManojitoDeClaveles
 {
     public partial class Form1 : Form
     {
-        private Teatro teatro;
+        public Teatro teatro;
         public Form1()
         {
             InitializeComponent();
             panPrincipal.Controls.Add(new Login());
+        }
+        public void LALA()
+        {
+
         }
     }
 }
