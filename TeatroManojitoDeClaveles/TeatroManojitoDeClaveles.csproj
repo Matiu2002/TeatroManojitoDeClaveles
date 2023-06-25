@@ -211,22 +211,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Páginas\Login.cs">
+    <Compile Include="Páginas\Login_real.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Páginas\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Páginas\Login_real.Designer.cs">
+      <DependentUpon>Login_real.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Páginas\PaginaPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Páginas\PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Páginas\RegistroFunciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Páginas\Suscripcion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Páginas\Suscripcion.Designer.cs">
+      <DependentUpon>Suscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Páginas\UserControl1.Designer.cs">
+      <DependentUpon>RegistroFunciones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Páginas\Login_real.resx">
+      <DependentUpon>Login_real.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -237,11 +252,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Páginas\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Páginas\PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Páginas\Suscripcion.resx">
+      <DependentUpon>Suscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Páginas\UserControl1.resx">
+      <DependentUpon>RegistroFunciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -257,7 +275,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\clientes.png" />
+    <Content Include="Resources\compras.png" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\LOGOS.png" />
+    <Content Include="Resources\maxi.png" />
+    <Content Include="Resources\minimazar.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\producto.png" />
+    <Content Include="Resources\producto2.png" />
+    <Content Include="Resources\reportes.png" />
+    <Content Include="Resources\res.png" />
+    <Content Include="Resources\salir.png" />
+    <Content Include="Resources\venta.png" />
+    <Content Include="Resources\png-transparent-drama-school-theatre-play-acting-theater-love-face-cat-like-mammal-thumbnail.png" />
+    <Content Include="Resources\png-transparent-theatre-cinema-mask-computer-icons-theater-face-logo-monochrome.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
