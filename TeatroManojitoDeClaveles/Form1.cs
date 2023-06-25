@@ -18,7 +18,7 @@ namespace TeatroManojitoDeClaveles
         public Form1()
         {
             InitializeComponent();
-            panPrincipal.Controls.Add(new Login());
+            panPrincipal.Controls.Add(new Login_real());
         }
     }
 }

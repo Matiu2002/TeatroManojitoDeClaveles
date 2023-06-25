@@ -18,7 +18,7 @@ namespace WPFPublicidad.Clases
         public ConexionBD()
         {
             // Hay que corregir el nombre
-            CadenaConexion = @"Data Source=DESKTOP-BUL9PBP\SQLEXPRESS; Initial Catalog= Publicidad; Integrated Security=true; TrustServerCertificate=True";
+            CadenaConexion = @"Data Source=DESKTOP-ML8DPAT\SQLEXPRESS; Initial Catalog= manojitodeclavelesceleste; Integrated Security=true; TrustServerCertificate=True";
             Conexion = new SqlConnection(CadenaConexion);
         }
         public DataSet ConsultasSQL(string ConsSQL)
@@ -54,6 +54,24 @@ namespace WPFPublicidad.Clases
                 MessageBox.Show("Error");
             }
             return ok;
+        }
+
+        public void Open()
+        {
+            try
+            {
+                Conexion.Open();
+                Console.WriteLine("DB working");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error opening db: " + ex.Message);
+            }
+        }
+
+        public void Close()
+        {
+            Conexion.Close();
         }
         /*
         public string Login(string rut, string clave)
