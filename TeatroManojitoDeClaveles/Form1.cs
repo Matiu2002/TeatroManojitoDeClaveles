@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeatroManojitoDeClaveles.Clases;
+using TeatroManojitoDeClaveles.Páginas;
 
 namespace TeatroManojitoDeClaveles
 {
@@ -17,12 +18,7 @@ namespace TeatroManojitoDeClaveles
         public Form1()
         {
             InitializeComponent();
-        }
-        public bool IniciarSesion(string rut, string contraseña)
-        {
-            bool ok = true;
-
-            return ok;
+            panPrincipal.Controls.Add(new Login());
         }
     }
 }
