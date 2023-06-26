@@ -18,7 +18,7 @@ namespace WPFPublicidad.Clases
         public ConexionBD()
         {
             // Hay que corregir el nombre
-            CadenaConexion = @"Data Source=DESKTOP-ML8DPAT\SQLEXPRESS; Initial Catalog= manojitodeclavelesceleste; Integrated Security=true; TrustServerCertificate=True";
+            CadenaConexion = @"Data Source=DESKTOP-BUL9PBP\SQLEXPRESS; Initial Catalog= manojitodeclavelesceleste2; Integrated Security=true; TrustServerCertificate=True";
             Conexion = new SqlConnection(CadenaConexion);
         }
         public DataSet ConsultasSQL(string ConsSQL)

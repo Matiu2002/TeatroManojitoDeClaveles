@@ -205,11 +205,35 @@
     <Compile Include="Enum\ETipoEvento.cs" />
     <Compile Include="Enum\ETipoMembresia.cs" />
     <Compile Include="Enum\ETipoTicket.cs" />
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funciones.Designer.cs">
+      <DependentUpon>Funciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTicket.Designer.cs">
+      <DependentUpon>InfoTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Páginas\Login_real.cs">
       <SubType>UserControl</SubType>
@@ -237,8 +261,68 @@
     <Compile Include="Páginas\UserControl1.Designer.cs">
       <DependentUpon>RegistroFunciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro Colab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro Colab.Designer.cs">
+      <DependentUpon>Registro Colab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleado.Designer.cs">
+      <DependentUpon>RegistroEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFinanzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFinanzas.Designer.cs">
+      <DependentUpon>RegistroFinanzas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroFuncion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFuncion.Designer.cs">
+      <DependentUpon>RegistroFuncion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroInsitucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroInsitucion.Designer.cs">
+      <DependentUpon>RegistroInsitucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPared.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPared.Designer.cs">
+      <DependentUpon>RegistroPared.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suscripcion.Designer.cs">
+      <DependentUpon>Suscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suscrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suscrito.Designer.cs">
+      <DependentUpon>Suscrito.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funciones.resx">
+      <DependentUpon>Funciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTicket.resx">
+      <DependentUpon>InfoTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Páginas\Login_real.resx">
       <DependentUpon>Login_real.cs</DependentUpon>
@@ -261,6 +345,31 @@
     <EmbeddedResource Include="Páginas\UserControl1.resx">
       <DependentUpon>RegistroFunciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registro Colab.resx">
+      <DependentUpon>Registro Colab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroEmpleado.resx">
+      <DependentUpon>RegistroEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFinanzas.resx">
+      <DependentUpon>RegistroFinanzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFuncion.resx">
+      <DependentUpon>RegistroFuncion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroInsitucion.resx">
+      <DependentUpon>RegistroInsitucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPared.resx">
+      <DependentUpon>RegistroPared.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suscripcion.resx">
+      <DependentUpon>Suscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suscrito.resx">
+      <DependentUpon>Suscrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\TeatroManojitoDeClaveles.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -276,9 +385,100 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Release\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Azure.Core.dll" />
+    <Content Include="bin\Debug\Azure.Core.xml" />
+    <Content Include="bin\Debug\Azure.Identity.dll" />
+    <Content Include="bin\Debug\Azure.Identity.xml" />
+    <Content Include="bin\Debug\de\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\Imagenes\cerrar.png" />
+    <Content Include="bin\Debug\Imagenes\clientes.png" />
+    <Content Include="bin\Debug\Imagenes\compras.png" />
+    <Content Include="bin\Debug\Imagenes\empleados.png" />
+    <Content Include="bin\Debug\Imagenes\logo.png" />
+    <Content Include="bin\Debug\Imagenes\LOGOS.png" />
+    <Content Include="bin\Debug\Imagenes\maxi.png" />
+    <Content Include="bin\Debug\Imagenes\minimazar.png" />
+    <Content Include="bin\Debug\Imagenes\pagos.png" />
+    <Content Include="bin\Debug\Imagenes\producto.png" />
+    <Content Include="bin\Debug\Imagenes\producto2.png" />
+    <Content Include="bin\Debug\Imagenes\reportes.png" />
+    <Content Include="bin\Debug\Imagenes\res.png" />
+    <Content Include="bin\Debug\Imagenes\salir.png" />
+    <Content Include="bin\Debug\Imagenes\venta.png" />
+    <Content Include="bin\Debug\it\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.arm64.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.arm64.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x64.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x64.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x86.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x86.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.xml" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\Debug\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="bin\Debug\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="bin\Debug\System.Memory.Data.dll" />
+    <Content Include="bin\Debug\System.Memory.Data.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.ProtectedData.dll" />
+    <Content Include="bin\Debug\System.Security.Cryptography.ProtectedData.xml" />
+    <Content Include="bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.dll" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.xml" />
+    <Content Include="bin\Debug\System.Text.Json.dll" />
+    <Content Include="bin\Debug\System.Text.Json.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
+    <Content Include="bin\Debug\TeatroManojitoDeClaveles.exe" />
+    <Content Include="bin\Debug\TeatroManojitoDeClaveles.pdb" />
+    <Content Include="bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\clientes.png" />
     <Content Include="Resources\compras.png" />

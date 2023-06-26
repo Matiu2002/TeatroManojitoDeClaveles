@@ -11,7 +11,6 @@ namespace TeatroManojitoDeClaveles.Clases
     {
         protected int capacidad;
         protected List<Artista> artistas;
-        protected ETipoEvento tipoE;
         protected int entradas_disponibles;
         protected ValoresTickets valores;
         public Evento()
@@ -19,26 +18,24 @@ namespace TeatroManojitoDeClaveles.Clases
             id = 0;
             fecha = DateTime.Today;
             horario = "Sin definir";
-            numero_participantes = 50;
-            tipo = new ETipoActividad();
+            nombre = "Sin definir";
+            tipo = "Sin definir";
             costo_actividad = 50000;
             capacidad = 10000;
             artistas = new List<Artista>();
-            tipoE = new ETipoEvento();
             entradas_disponibles = 10000;
             valores = new ValoresTickets();
         }
-        public Evento(int id, string f, string h, int n, string t, int c, int ca, string te, int ed)
+        public Evento(int id, string f, string h, string n, string t, int c, int ca, int ed)
         {
             this.id = id;
             fecha = DateTime.Parse(f);
             horario = h;
-            numero_participantes = n;
-            //tipo revisar;
+            nombre = n;
+            tipo = t;
             costo_actividad = c;
             capacidad = ca;
             artistas = new List<Artista>();
-            //tipoE revisar;
             entradas_disponibles = ed;
             valores = new ValoresTickets();
         }
@@ -47,12 +44,11 @@ namespace TeatroManojitoDeClaveles.Clases
             id = e.id;
             fecha = e.fecha;
             horario = e.horario;
-            numero_participantes = e.numero_participantes;
+            nombre = e.nombre;
             tipo = e.tipo;
             costo_actividad = e.costo_actividad;
             capacidad = e.capacidad;
             artistas = e.artistas;
-            tipoE = e.tipoE;
             entradas_disponibles = e.entradas_disponibles;
             valores = e.valores;
         }

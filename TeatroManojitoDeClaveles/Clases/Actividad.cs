@@ -13,8 +13,8 @@ namespace TeatroManojitoDeClaveles.Clases
         protected int id;
         protected DateTime fecha;
         protected string horario;
-        protected int numero_participantes;
-        protected ETipoActividad tipo;
+        protected string nombre;
+        protected string tipo;
         protected int costo_actividad;
 
         public Actividad()
@@ -22,16 +22,16 @@ namespace TeatroManojitoDeClaveles.Clases
             id = 0;
             fecha = DateTime.Today;
             horario = "Sin definir";
-            numero_participantes = 50;
-            tipo = new ETipoActividad();
+            nombre = "Sin definir";
+            tipo = "Sin definir";
             costo_actividad = 50000;
         }
-        public Actividad(int id, string f, string h, int n, string t, int c)
+        public Actividad(int id, string f, string h, string n, string t, int c)
         {
             this.id = id;
             fecha = DateTime.Parse(f);
             horario = h;
-            numero_participantes = n;
+            nombre = n;
             //tipo revisar;
             costo_actividad = c;
         }
@@ -41,7 +41,7 @@ namespace TeatroManojitoDeClaveles.Clases
             int.TryParse(campo[0], out id);
             fecha = DateTime.Parse(campo[1]);
             horario = campo[2];
-            numero_participantes = int.Parse(campo[3]);
+            nombre = campo[3];
             //tipo revisar;
             costo_actividad = int.Parse(campo[5]);
         }
@@ -50,7 +50,7 @@ namespace TeatroManojitoDeClaveles.Clases
             id = a.id;
             fecha = a.fecha;
             horario = a.horario;
-            numero_participantes = a.numero_participantes;
+            nombre = a.nombre;
             tipo = a.tipo;
             costo_actividad = a.costo_actividad;
         }

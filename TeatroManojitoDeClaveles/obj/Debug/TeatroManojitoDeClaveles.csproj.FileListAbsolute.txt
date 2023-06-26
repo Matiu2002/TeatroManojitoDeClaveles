@@ -1,34 +1,6 @@
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\TeatroManojitoDeClaveles.exe.config
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\TeatroManojitoDeClaveles.exe
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\TeatroManojitoDeClaveles.pdb
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Azure.Core.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Azure.Identity.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.Data.SqlClient.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.Identity.Client.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.Protocols.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Buffers.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Configuration.ConfigurationManager.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Memory.Data.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Memory.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Numerics.Vectors.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Security.AccessControl.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Security.Cryptography.ProtectedData.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Security.Permissions.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Security.Principal.Windows.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Text.Encodings.Web.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Text.Json.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\System.ValueTuple.dll
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Azure.Core.xml
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Azure.Identity.xml
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
@@ -72,7 +44,6 @@ D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\Te
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.csproj.SuggestedBindingRedirects.cache
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Form1.resources
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Properties.Resources.resources
-D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.Login.resources
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.PaginaPrincipal.resources
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.csproj.GenerateResource.cache
 D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.csproj.CoreCompileInputs.cache
@@ -162,3 +133,18 @@ D:\Universidad\5to Semestre\Taller de programacion\Proyecto Final\TeatroManojito
 D:\Universidad\5to Semestre\Taller de programacion\Proyecto Final\TeatroManojitoDeClaveles\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.Login_real.resources
 D:\Universidad\5to Semestre\Taller de programacion\Proyecto Final\TeatroManojitoDeClaveles\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.Suscripcion.resources
 D:\Universidad\5to Semestre\Taller de programacion\Proyecto Final\TeatroManojitoDeClaveles\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.UserControl1.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Estadisticas.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Form2.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Funciones.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.InfoTicket.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.Login_real.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.Suscripcion.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Páginas.UserControl1.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Registro_Colab.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.RegistroEmpleado.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.RegistroFinanzas.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.RegistroFuncion.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.RegistroInsitucion.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.RegistroPared.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Suscripcion.resources
+D:\Proyectos VS Universidad\ProyectoTeatro\TeatroManojitoDeClaveles\obj\Debug\TeatroManojitoDeClaveles.Suscrito.resources
