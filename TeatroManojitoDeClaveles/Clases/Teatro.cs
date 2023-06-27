@@ -117,7 +117,6 @@ namespace TeatroManojitoDeClaveles.Clases
         public void LlenarArtistasFunciones()
         {
             ConexionBD db = new ConexionBD();
-            DataSet ds1 = db.ConsultasSQL("select id from Artista");
             foreach (Actividad a in actividades)
             {
                 DataSet ds = db.ConsultasSQL("SELECT DAA.idArtista, I.id, A.nombre as nom, I.nombre, I.personaje, ACT.nomEvento\r\nFROM DETALLE_ACTIVIDAD_ARTISTA DAA LEFT JOIN ARTISTA A ON DAA.idArtista = A.id\r\nLEFT JOIN INTEGRANTE I ON A.id = I.idArtista\r\nLEFT JOIN ACTIVIDAD ACT ON DAA.idTipoActividad = ACT.id\r\nWHERE ACT.id =" + a.ID);
@@ -162,6 +161,32 @@ namespace TeatroManojitoDeClaveles.Clases
                 }
             }
         }
+        public void LlenarValoresEventos()
+        {
+            ConexionBD db = new ConexionBD();
+            foreach (Actividad a in actividades)
+            {
+                DataSet ds = db.ConsultasSQL("SELECT * FROM valor_ticket WHERE idTipoActividad = " + a.ID);
+                if (a is Evento)
+                {
+                    Evento e = (Evento)a;
+                    e.Artistas = new List<Artista>();
+                    int cantidadPA = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int cantidadPB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int cantidadG = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int cantidadB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int vendidoPA = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int vendidoPB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int vendidoG = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int vendidoB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int valorPlateaAlta = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int valorPlateaBaja = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int valorGaleria = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int valorBalcon = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    e.Valores = new ValoresTickets(cantidadPA, valorPlateaAlta, vendidoPA, cantidadPB, valorPlateaBaja, vendidoPB, cantidadB, valorBalcon, vendidoB, cantidadG, valorGaleria, vendidoG);
+                }
+            }
+        }
         public void LlenarParedes()
         {
             paredes = new List<Pared>();
@@ -184,5 +209,129 @@ namespace TeatroManojitoDeClaveles.Clases
                 MessageBox.Show("Error");
             }
         }
+        public void LlenarColaboradores()
+        {
+            colaboradores = new List<Colaborador>();
+            ConexionBD bd = new ConexionBD();
+            DataSet ds = bd.ConsultasSQL("select * from colaborador");
+            try
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    string id = ds.Tables[0].Rows[i]["id"].ToString();
+                    string nombre = ds.Tables[0].Rows[i]["nom"].ToString();
+                    string finan = ds.Tables[0].Rows[i]["finan"].ToString();
+                    string finanPorc = ds.Tables[0].Rows[i]["finanPorcentual"].ToString();
+
+                    colaboradores.Add(new Colaborador(int.Parse(id), nombre, float.Parse(finanPorc), int.Parse(finan)));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
+        public void LlenarClientes()
+        {
+            clientes = new List<Cliente>();
+            ConexionBD bd = new ConexionBD();
+            DataSet ds = bd.ConsultasSQL("SELECT c.id, c.rut, c.correo, CONCAT(c.nombre, ' ', c.segNom, ' ', c.apellido, ' ', c.segApe) as nombreCompleto, s.id as idmem FROM CLIENTE as c left join SUSCRIPCION as s on c.id = s.idCliente\r\n");
+            try
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    string id = ds.Tables[0].Rows[i]["id"].ToString();
+                    string idmem = ds.Tables[0].Rows[i]["idmem"].ToString();
+                    string nombre = ds.Tables[0].Rows[i]["nombreCompleto"].ToString();
+                    string rut = ds.Tables[0].Rows[i]["rut"].ToString();
+                    string correo = ds.Tables[0].Rows[i]["correo"].ToString();
+                    string suscripcion;
+                    if (idmem.IsNullOrEmpty())
+                    {
+                        suscripcion = "No";
+                    }
+                    else
+                    {
+                        suscripcion = "Amigo del teatro";
+                    }
+                    clientes.Add(new Cliente(int.Parse(id), new Rut(rut), nombre, correo, suscripcion));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
+        public void LlenarTickets()
+        {
+            //Revisar
+            tickets = new List<Ticket>();
+            ConexionBD bd = new ConexionBD();
+            DataSet ds = bd.ConsultasSQL("select * from ticket");
+            try
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    string id = ds.Tables[0].Rows[i]["id"].ToString();
+                    string nombre = ds.Tables[0].Rows[i]["nom"].ToString();
+                    string finan = ds.Tables[0].Rows[i]["finan"].ToString();
+                    string finanPorc = ds.Tables[0].Rows[i]["finanPorcentual"].ToString();
+
+                    colaboradores.Add(new Colaborador(int.Parse(id), nombre, float.Parse(finanPorc), int.Parse(finan)));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }//no listo
+        public void LlenarEmpleados()
+        {
+            //Revisar
+            ConexionBD db = new ConexionBD();
+            foreach (Actividad a in actividades)
+            {
+                DataSet ds = db.ConsultasSQL("SELECT DAA.idArtista, I.id, A.nombre as nom, I.nombre, I.personaje, ACT.nomEvento\r\nFROM DETALLE_ACTIVIDAD_ARTISTA DAA LEFT JOIN ARTISTA A ON DAA.idArtista = A.id\r\nLEFT JOIN INTEGRANTE I ON A.id = I.idArtista\r\nLEFT JOIN ACTIVIDAD ACT ON DAA.idTipoActividad = ACT.id\r\nWHERE ACT.id =" + a.ID);
+                string nombre = ds.Tables[0].Rows[0]["nom"].ToString();
+                int idev = int.Parse(ds.Tables[0].Rows[0]["idArtista"].ToString());
+                if (a is Evento)
+                {
+                    Evento e = (Evento)a;
+                    e.Artistas = new List<Artista>();
+                    if (ds.Tables[0].Rows[0]["nombre"].ToString().IsNullOrEmpty())
+                    {
+
+                        Artista ar = new Artista(idev, nombre);
+                        e.Artistas.Add(ar);
+                    }
+                    else if (ds.Tables[0].Rows[0]["personaje"].ToString().IsNullOrEmpty())
+                    {
+                        Grupo g = new Grupo(idev, nombre);
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            int id = int.Parse(ds.Tables[0].Rows[i]["id"].ToString());
+                            string nom = ds.Tables[0].Rows[i]["nombre"].ToString();
+                            Integrante inte = new Integrante(id, nom);
+                            g.Integrantes.Add(inte);
+                        }
+                        e.Artistas.Add(g);
+                    }
+
+                    else
+                    {
+                        Reparto g = new Reparto(idev, nombre);
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            int id = int.Parse(ds.Tables[0].Rows[i]["id"].ToString());
+                            string nom = ds.Tables[0].Rows[i]["nombre"].ToString();
+                            string personaje = ds.Tables[0].Rows[i]["personaje"].ToString();
+                            Actor inte = new Actor(id, nombre, personaje);
+                            g.Actores.Add(inte);
+                        }
+                        e.Artistas.Add(g);
+                    }
+                }
+            }
+        }//no listo
     }
 }

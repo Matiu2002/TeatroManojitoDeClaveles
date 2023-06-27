@@ -7,11 +7,39 @@ using TeatroManojitoDeClaveles.Enum;
 
 namespace TeatroManojitoDeClaveles.Clases
 {
-    internal class Cliente
+    public class Cliente
     {
+        private int id;
         private Rut cliente;
-        private string nombre;
-        private ETipoMembresia membresia;
-        // Primero debo conseguir clase RUT
+        private string nombreCompleto;
+        private string correo;
+        private string membresia;
+        public string Membresia
+        {
+            get { return membresia; }
+            set { membresia = value; }
+        }
+        public Cliente()
+        {
+            cliente = new Rut();
+            nombreCompleto = "NA";
+            membresia = "NA";
+        }
+        public Cliente(int id, Rut cliente, string no, string co, string p)
+        {
+            this.id = id;
+            this.cliente = cliente;
+            nombreCompleto = no;
+            correo = co;
+            membresia = p;
+        }
+        public Cliente(Cliente a)
+        {
+            this.id = a.id;
+            cliente = a.cliente;
+            nombreCompleto = a.nombreCompleto;
+            correo = a.correo;
+            membresia = a.membresia;
+        }
     }
 }

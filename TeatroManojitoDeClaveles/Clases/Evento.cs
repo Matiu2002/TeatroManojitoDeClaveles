@@ -18,6 +18,11 @@ namespace TeatroManojitoDeClaveles.Clases
             get { return artistas; }
             set { artistas = value; }
         }
+        public ValoresTickets Valores
+        {
+            get { return valores; }
+            set { valores = value; }
+        }
         public Evento()
         {
             id = 0;

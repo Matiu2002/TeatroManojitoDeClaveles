@@ -12,26 +12,23 @@ namespace TeatroManojitoDeClaveles.Clases
         private int id_ticket;
         private int id_evento;
         private Rut rut_cliente;
-        private ETipoTicket tipo;
+        private string tipo;
         private int valor;
-        private bool estado;
         public Ticket()
         {
             id_ticket = 0;
             id_evento = 0;
             rut_cliente = new Rut();
-            tipo = new ETipoTicket();
+            tipo = "N/A";
             valor = 0;
-            estado = true;
         }
-        public Ticket(int id_ticket, int id_evento, Rut rut_cliente, ETipoTicket tipo, int valor, bool estado)
+        public Ticket(int id_ticket, int id_evento, Rut rut_cliente, string tipo, int valor)
         {
             this.id_ticket = id_ticket;
             this.id_evento = id_evento;
             this.rut_cliente = rut_cliente;
             this.tipo = tipo;
             this.valor = valor;
-            this.estado = estado;
         }
         public Ticket(Ticket t)
         {
@@ -40,7 +37,6 @@ namespace TeatroManojitoDeClaveles.Clases
             this.rut_cliente = t.rut_cliente;
             this.tipo = t.tipo;
             this.valor = t.valor;
-            this.estado = t.estado;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace TeatroManojitoDeClaveles
     public partial class Form1 : Form
     {
         public Teatro teatro;
+        public Cliente cliente;
         public Form1()
         {
             InitializeComponent();
@@ -118,6 +119,21 @@ namespace TeatroManojitoDeClaveles
             DataSet ds = bd.ConsultasSQL("SELECT A.id, A.nomEvento, A.costo, A.hora, A.fecha, A.capacidad, AB.razonCausa, NA.nom FROM ACTIVIDAD as A left join ACTIVIDAD_BENEFICA as AB on A.idActBenefica = AB.id left join NOMBRE_ACTIVIDAD as NA on A.idNombreAct = NA.id\r\n");
             teatro = new Teatro("Manojito de claveles", "lala12345", ds);
             teatro.LlenarArtistasFunciones();
+            teatro.LlenarValoresEventos();
+            return true;
+        }
+        public bool LlenarAdmin()
+        {
+            teatro.LlenarParedes();
+            teatro.LlenarClientes();
+            teatro.LlenarTickets();
+            teatro.LlenarEmpleados();
+            teatro.LlenarColaboradores();
+            return true;
+        }
+        public bool LlenarCliente(Cliente c)
+        {
+            cliente = new Cliente(c);
             return true;
         }
     }

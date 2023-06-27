@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeatroManojitoDeClaveles.Clases
 {
-    internal class Rut
+    public class Rut
     {
         //atributos
         private int numero;

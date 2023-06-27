@@ -8,7 +8,8 @@ namespace TeatroManojitoDeClaveles.Clases
 {
     internal class Colaborador
     {
-        private int id;
+        private int id, financiamiento;
+        private float finanPorcentual;
         private string nombre;
 
         public Colaborador()
@@ -17,15 +18,19 @@ namespace TeatroManojitoDeClaveles.Clases
             nombre = "NA";
         }
 
-        public Colaborador(int id, string n)
+        public Colaborador(int id, string n, float finanPorcentual, int financiamiento)
         {
             this.id = id;
             nombre = n;
+            this.finanPorcentual = finanPorcentual;
+            this.financiamiento = financiamiento;
         }
         public Colaborador(Colaborador c)
         {
             id = c.id;
             nombre = c.nombre;
+            this.finanPorcentual = c.finanPorcentual;
+            this.financiamiento = c.financiamiento;
         }
     }
 }
