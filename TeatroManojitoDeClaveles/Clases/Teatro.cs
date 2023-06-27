@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WPFPublicidad.Clases;
 
 namespace TeatroManojitoDeClaveles.Clases
 {
@@ -106,6 +107,76 @@ namespace TeatroManojitoDeClaveles.Clases
                     {
                         actividades.Add(new Evento_FB(int.Parse(id), fecha, hora, nombre, tipo, int.Parse(costo), int.Parse(capacidad), 6, razon));
                     }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
+        public void LlenarArtistasFunciones()
+        {
+            ConexionBD db = new ConexionBD();
+            DataSet ds1 = db.ConsultasSQL("select id from Artista");
+            foreach (Actividad a in actividades)
+            {
+                DataSet ds = db.ConsultasSQL("SELECT DAA.idArtista, I.id, A.nombre as nom, I.nombre, I.personaje, ACT.nomEvento\r\nFROM DETALLE_ACTIVIDAD_ARTISTA DAA LEFT JOIN ARTISTA A ON DAA.idArtista = A.id\r\nLEFT JOIN INTEGRANTE I ON A.id = I.idArtista\r\nLEFT JOIN ACTIVIDAD ACT ON DAA.idTipoActividad = ACT.id\r\nWHERE ACT.id =" + a.ID);
+                string nombre = ds.Tables[0].Rows[0]["nom"].ToString();
+                int idev = int.Parse(ds.Tables[0].Rows[0]["idArtista"].ToString());
+                if (a is Evento)
+                {
+                    Evento e = (Evento)a;
+                    e.Artistas = new List<Artista>();
+                    if (ds.Tables[0].Rows[0]["nombre"].ToString().IsNullOrEmpty())
+                    {
+
+                        Artista ar = new Artista(idev, nombre);
+                        e.Artistas.Add(ar);
+                    }
+                    else if (ds.Tables[0].Rows[0]["personaje"].ToString().IsNullOrEmpty())
+                    {
+                        Grupo g = new Grupo(idev, nombre);
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            int id = int.Parse(ds.Tables[0].Rows[i]["id"].ToString());
+                            string nom = ds.Tables[0].Rows[i]["nombre"].ToString();
+                            Integrante inte = new Integrante(id, nom);
+                            g.Integrantes.Add(inte);
+                        }
+                        e.Artistas.Add(g);
+                    }
+
+                    else
+                    {
+                        Reparto g = new Reparto(idev, nombre);
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            int id = int.Parse(ds.Tables[0].Rows[i]["id"].ToString());
+                            string nom = ds.Tables[0].Rows[i]["nombre"].ToString();
+                            string personaje = ds.Tables[0].Rows[i]["personaje"].ToString();
+                            Actor inte = new Actor(id, nombre, personaje);
+                            g.Actores.Add(inte);
+                        }
+                        e.Artistas.Add(g);
+                    }
+                }
+            }
+        }
+        public void LlenarParedes()
+        {
+            paredes = new List<Pared>();
+            ConexionBD bd = new ConexionBD();
+            DataSet ds = bd.ConsultasSQL("select * from pared");
+            try
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    string id = ds.Tables[0].Rows[i]["id"].ToString();
+                    string nombre = ds.Tables[0].Rows[i]["nomEmpresa"].ToString();
+                    string costo = ds.Tables[0].Rows[i]["costo"].ToString();
+                    string fecha = ds.Tables[0].Rows[i]["fechaLimite"].ToString();
+
+                    paredes.Add(new Pared(int.Parse(id), int.Parse(costo), fecha, nombre));
                 }
             }
             catch

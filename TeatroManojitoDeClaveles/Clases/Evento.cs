@@ -13,6 +13,11 @@ namespace TeatroManojitoDeClaveles.Clases
         protected List<Artista> artistas;
         protected int entradas_disponibles;
         protected ValoresTickets valores;
+        public List<Artista> Artistas
+        {
+            get { return artistas; }
+            set { artistas = value; }
+        }
         public Evento()
         {
             id = 0;

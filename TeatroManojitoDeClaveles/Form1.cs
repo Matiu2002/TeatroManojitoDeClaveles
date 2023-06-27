@@ -117,6 +117,7 @@ namespace TeatroManojitoDeClaveles
             ConexionBD bd = new ConexionBD();
             DataSet ds = bd.ConsultasSQL("SELECT A.id, A.nomEvento, A.costo, A.hora, A.fecha, A.capacidad, AB.razonCausa, NA.nom FROM ACTIVIDAD as A left join ACTIVIDAD_BENEFICA as AB on A.idActBenefica = AB.id left join NOMBRE_ACTIVIDAD as NA on A.idNombreAct = NA.id\r\n");
             teatro = new Teatro("Manojito de claveles", "lala12345", ds);
+            teatro.LlenarArtistasFunciones();
             return true;
         }
     }

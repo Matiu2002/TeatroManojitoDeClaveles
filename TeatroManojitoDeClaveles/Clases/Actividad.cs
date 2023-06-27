@@ -16,6 +16,11 @@ namespace TeatroManojitoDeClaveles.Clases
         protected string nombre;
         protected string tipo;
         protected int costo_actividad;
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public Actividad()
         {

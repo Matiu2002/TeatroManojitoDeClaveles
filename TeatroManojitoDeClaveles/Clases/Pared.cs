@@ -10,27 +10,27 @@ namespace TeatroManojitoDeClaveles.Clases
     {
         private int id;
         private int valor;
-        private bool disponible;
+        private string fecha;
         private string arrienda;
         public Pared()
         {
             id = 0;
             valor = 0;
-            disponible = true;
+            fecha = "N/A";
             arrienda = "N/A";
         }
-        public Pared(int id, int valor, bool disponible, string arrienda)
+        public Pared(int id, int valor, string fecha, string arrienda)
         {
             this.id = id;
             this.valor = valor;
-            this.disponible = disponible;
+            this.fecha = fecha;
             this.arrienda = arrienda;
         }
         public Pared(Pared p)
         {
             id = p.id;
             valor = p.valor;
-            disponible = p.disponible;
+            fecha = p.fecha;
             arrienda = p.arrienda;
         }
     }
