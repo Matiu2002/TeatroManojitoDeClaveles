@@ -278,11 +278,11 @@ namespace TeatroManojitoDeClaveles.Clases
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     string id = ds.Tables[0].Rows[i]["id"].ToString();
-                    string nombre = ds.Tables[0].Rows[i]["nom"].ToString();
-                    string finan = ds.Tables[0].Rows[i]["finan"].ToString();
-                    string finanPorc = ds.Tables[0].Rows[i]["finanPorcentual"].ToString();
+                    string rut = ds.Tables[0].Rows[i]["rut"].ToString();
+                    string valor = ds.Tables[0].Rows[i]["valor"].ToString();
+                    string lugar = ds.Tables[0].Rows[i][""].ToString();
 
-                    colaboradores.Add(new Colaborador(int.Parse(id), nombre, float.Parse(finanPorc), int.Parse(finan)));
+                    colaboradores.Add(new Ticket(int.Parse(id), nombre, float.Parse(finanPorc), int.Parse(finan)));
                 }
             }
             catch
