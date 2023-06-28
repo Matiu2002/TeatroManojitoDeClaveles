@@ -81,7 +81,7 @@ namespace TeatroManojitoDeClaveles
 
         private void btnSus_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Suscripcion());
+            AbrirForm(new Suscrito());
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)

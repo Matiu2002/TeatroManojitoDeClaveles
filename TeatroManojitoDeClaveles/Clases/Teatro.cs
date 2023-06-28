@@ -22,6 +22,11 @@ namespace TeatroManojitoDeClaveles.Clases
         private List<Cliente> clientes;
         private List<Ticket> tickets;
         private List<Empleado> empleados;
+        public List<Actividad> Actividades
+        {
+            get { return actividades; }
+            set { actividades = value; }
+        }
 
         public Teatro()
         {
@@ -171,18 +176,18 @@ namespace TeatroManojitoDeClaveles.Clases
                 {
                     Evento e = (Evento)a;
                     e.Artistas = new List<Artista>();
-                    int cantidadPA = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int cantidadPB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int cantidadG = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int cantidadB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int vendidoPA = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int vendidoPB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int vendidoG = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int vendidoB = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int valorPlateaAlta = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int valorPlateaBaja = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int valorGaleria = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
-                    int valorBalcon = int.Parse(ds.Tables[0].Rows[0]["nombre"].ToString());
+                    int cantidadPA = int.Parse(ds.Tables[0].Rows[0]["cantidadPA"].ToString());
+                    int cantidadPB = int.Parse(ds.Tables[0].Rows[0]["cantidadPB"].ToString());
+                    int cantidadG = int.Parse(ds.Tables[0].Rows[0]["cantidadG"].ToString());
+                    int cantidadB = int.Parse(ds.Tables[0].Rows[0]["cantidadB"].ToString());
+                    int vendidoPA = int.Parse(ds.Tables[0].Rows[0]["vendidoPA"].ToString());
+                    int vendidoPB = int.Parse(ds.Tables[0].Rows[0]["vendidoPB"].ToString());
+                    int vendidoG = int.Parse(ds.Tables[0].Rows[0]["vendidoG"].ToString());
+                    int vendidoB = int.Parse(ds.Tables[0].Rows[0]["vendidoB"].ToString());
+                    int valorPlateaAlta = int.Parse(ds.Tables[0].Rows[0]["valorPlateaAlta"].ToString());
+                    int valorPlateaBaja = int.Parse(ds.Tables[0].Rows[0]["valorPlateaBaja"].ToString());
+                    int valorGaleria = int.Parse(ds.Tables[0].Rows[0]["valorGaleria"].ToString());
+                    int valorBalcon = int.Parse(ds.Tables[0].Rows[0]["valorBalcon"].ToString());
                     e.Valores = new ValoresTickets(cantidadPA, valorPlateaAlta, vendidoPA, cantidadPB, valorPlateaBaja, vendidoPB, cantidadB, valorBalcon, vendidoB, cantidadG, valorGaleria, vendidoG);
                 }
             }

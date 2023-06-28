@@ -8,7 +8,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace TeatroManojitoDeClaveles.Clases
 {
-    internal class Actividad
+    public class Actividad
     {
         protected int id;
         protected DateTime fecha;

@@ -19,6 +19,11 @@ namespace TeatroManojitoDeClaveles.Clases
             get { return membresia; }
             set { membresia = value; }
         }
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public Cliente()
         {
             cliente = new Rut();
